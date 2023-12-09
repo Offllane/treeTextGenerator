@@ -1,0 +1,55 @@
+@import './variables.scss';
+@import "./icons.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  gap: 20px;
+  min-height: 100vh;
+  font-family: $default-font;
+  line-height: $default-line-height;
+  font-size: $default-font-size;
+  color: $color-grey-light;
+  padding: 20px;
+}
+
+.left-part {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+
+  #textarea {
+    height: 100%;
+    min-height: 300px;
+    padding: 5px;
+  }
+}
+
+.right-part {
+  display: flex;
+  width: 50%;
+  outline: 1px solid black;
+  text-align: center;
+
+  .tree-text {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 4px;
+      background-color: deepskyblue;
+      opacity: .3;
+    }
+  }
+}
